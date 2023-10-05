@@ -34,7 +34,7 @@ const PostCard = ({
                     height={300}
                 />
                 {/* Post Content */}
-                {/* @ts-expect-error Async Server Component */}
+
                 <PostContent post={post} />
             </div>
         </Link>
