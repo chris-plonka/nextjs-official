@@ -3,6 +3,7 @@ import Link from 'next/link';
 import directus from "lib/directus";
 import { Post } from "types/collection";
 import PostCard from 'components/post/post-card-blog';
+import { notFound } from "next/navigation";
 
 
 
@@ -43,13 +44,13 @@ export default async function BlogPage() {
 
 
 
-  {/*
+
     console.log(posts);
 
     if (!posts) {
       notFound();
     }
-  */}
+
 
 
   const posts = await getAllPosts();
