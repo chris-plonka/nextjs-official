@@ -51,9 +51,7 @@ export default async function BlogPage() {
       notFound();
     }
   */}
-  if (!posts) {
-    notFound()
-  }
+
 
   const posts = await getAllPosts();
 
