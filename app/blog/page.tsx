@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import directus from "lib/directus";
-import posts from "./get-from-db"
 import { Post } from "types/collection";
 import PostCard from 'components/post/post-card-blog';
 
