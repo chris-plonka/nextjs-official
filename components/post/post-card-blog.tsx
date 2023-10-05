@@ -28,7 +28,7 @@ const PostCard = ({
 
             {/* Post Content */}
 
-            <div className="w-full flex flex-col  space-y-1 mb-4">
+            <div className="w-full flex flex-col mb-1">
                 <p className="text-neutral-900 dark:text-neutral-100 tracking-tight">
                     <PostContent post={post} />
                 </p>

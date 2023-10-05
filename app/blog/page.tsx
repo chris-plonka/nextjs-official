@@ -46,9 +46,9 @@ export default async function BlogPage() {
 
 
 
-    if (!posts) {
-      notFound();
-    }
+  if (!posts) {
+    notFound();
+  }
 
 
 
@@ -66,22 +66,39 @@ export default async function BlogPage() {
       <h1 className="font-bold text-2xl mb-8 tracking-tighter">read my explorer blog</h1>
 
       <PostCard post={posts[0]} />
+      <div className="py-3 mt-1 border-t"></div>
       <PostCard post={posts[1]} />
+      <div className="py-3 mt-1 border-t"></div>
       <PostCard post={posts[2]} />
+      <div className="py-3 mt-1 border-t"></div>
       <PostCard post={posts[3]} />
+      <div className="py-3 mt-1 border-t"></div>
       <PostCard post={posts[4]} />
+      <div className="py-3 mt-1 border-t"></div>
       <PostCard post={posts[5]} />
+      <div className="py-3 mt-1 border-t"></div>
       <PostCard post={posts[6]} />
+      <div className="py-3 mt-1 border-t"></div>
       <PostCard post={posts[7]} />
+      <div className="py-3 mt-1 border-t"></div>
       <PostCard post={posts[8]} />
+      <div className="py-3 mt-1 border-t"></div>
       <PostCard post={posts[9]} />
+      <div className="py-3 mt-1 border-t"></div>
       <PostCard post={posts[10]} />
+      <div className="py-3 mt-1 border-t"></div>
       <PostCard post={posts[11]} />
+      <div className="py-3 mt-1 border-t"></div>
       <PostCard post={posts[12]} />
+      <div className="py-3 mt-1 border-t"></div>
       <PostCard post={posts[13]} />
+      <div className="py-3 mt-1 border-t"></div>
       <PostCard post={posts[14]} />
+      <div className="py-3 mt-1 border-t"></div>
       <PostCard post={posts[15]} />
+      <div className="py-3 mt-1 border-t"></div>
       <PostCard post={posts[16]} />
+      <div className="py-3 mt-1 border-t"></div>
       <PostCard post={posts[17]} />
 
       {/*}      {posts
