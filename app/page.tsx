@@ -12,6 +12,7 @@ import directus from "lib/directus";
 import siteConfig from "config/site";
 import PaddingContainer from 'components/layout/padding-container'
 import SocialLink from "components/elements/social-link";
+import { notFound } from "next/navigation";
 
 {/*}
 import avatar from 'app/avatar.jpg';
@@ -151,18 +152,16 @@ export default async function Page() {
   };
 
 
+  const posts = await getAllPosts();
 
 
-
-  {/*
-  console.log(posts);
 
   if (!posts) {
     notFound();
   }
-*/}
 
-  const posts = await getAllPosts();
+
+
 
 
 
