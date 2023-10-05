@@ -3,9 +3,29 @@ const { withContentlayer } = require('next-contentlayer');
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: {
-    serverActions: true,
+  images: {
+    remotePatterns: [
+      {
+        hostname: "images.unsplash.com",
+        protocol: "https",
+      },
+
+      {
+        hostname: "directus-production-8ad9.up.railway.app",
+        protocol: "https",
+      },
+    ],
   },
+  /*   experimental: {
+         serverActions: true,
+     }*/
+
+
+  /*  experimental: {
+      serverActions: true,
+    },
+  */
+
   redirects() {
     try {
       return get('redirects');

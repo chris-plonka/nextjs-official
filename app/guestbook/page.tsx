@@ -4,6 +4,7 @@ import { queryBuilder } from 'lib/planetscale';
 import { SignIn, SignOut } from './buttons';
 import Form from './form';
 
+
 async function getGuestbook() {
   const data = await queryBuilder
     .selectFrom('guestbook')

@@ -6,13 +6,6 @@ import ship from 'public/images/home/ship.jpg';
 import filming from 'public/images/home/filming.jpg';
 import meetups from 'public/images/home/meetups.jpg';
 import vercel from 'public/images/home/vercel.jpg';
-import { Post } from "types/collection";
-import PostCard from 'components/post/post-card';
-import directus from "lib/directus";
-import siteConfig from "config/site";
-import PaddingContainer from 'components/layout/padding-container'
-import SocialLink from "components/elements/social-link";
-
 {/*}
 import avatar from 'app/avatar.jpg';
 import ViewCounter from 'app/blog/view-counter';
@@ -50,7 +43,7 @@ function ArrowIcon() {
   );
 }
 
-
+{/*}
 function ChannelLink({ img, link, name, subscribers }) {
   return (
     <a
@@ -102,7 +95,7 @@ function ChannelLink({ img, link, name, subscribers }) {
     </a>
   );
 }
-
+*/}
 {/*}
 async function BlogLink({ slug, name }) {
   const allViews = await getViewsCount();
@@ -128,58 +121,38 @@ async function BlogLink({ slug, name }) {
 
 export default async function Page() {
 
-
-  const getAllPosts = async () => {
-    try {
-      const posts = await directus.items("post").readByQuery({
-        fields: [
-          "*",
-          "author.id",
-          "author.first_name",
-          "author.last_name",
-          "category.id",
-          "category.title",
-        ],
-      });
-
-      return posts.data;
-
-    } catch (error) {
-      console.log(error);
-      throw new Error("Error fetching posts");
-    }
-  };
-
-
-
-
-
-  {/*
-  console.log(posts);
-
-  if (!posts) {
-    notFound();
-  }
-*/}
-
-  const posts = await getAllPosts();
-
-
-
-
-
-
   return (
     <section>
 
-      <h1 className="font-bold text-2xl mb-8 tracking-tighter">
-        hello, I'm chris-plonka
-      </h1>
-      <PostCard post={posts[3]} />
-      <div className="py-3 mt-7 border-t"></div>
+        <h1 className="font-bold text-2xl mb-8 tracking-tighter">
+          hey, I'm chris-plonka
+        </h1>
+
       <p className="prose prose-neutral dark:prose-invert">
-        {`I'm a frontend developer. Currently, I am work with new web technologies such as `}
-          < span className="not-prose">
+        {`I'm a frontend developer, optimist, and community builder. I currently
+        work as the VP of Developer Experience at `}
+        <span className="not-prose">
+          <Badge href="https://vercel.com">
+            <svg
+              width="13"
+              height="11"
+              viewBox="0 0 13 11"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              className="inline-flex mr-1"
+            >
+              <path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M6.5 0L13 11H0L6.5 0Z"
+                fill="currentColor"
+              />
+            </svg>
+            Vercel
+          </Badge>
+        </span>
+        {`, where I lead the
+        community for `}
         <Badge href="https://nextjs.org">
           <svg
             width="14"
@@ -269,32 +242,10 @@ export default async function Page() {
           </svg>
           React
         </Badge>
-        {`, on the `}
-        <Badge href="https://vercel.com">
-          <svg
-            width="13"
-            height="11"
-            viewBox="0 0 13 11"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            className="inline-flex mr-1"
-          >
-            <path
-              fillRule="evenodd"
-              clipRule="evenodd"
-              d="M6.5 0L13 11H0L6.5 0Z"
-              fill="currentColor"
-            />
-          </svg>
-          Vercel
-        </Badge>
-      </span>
-      {` platform`}
-      .
-    </p>
+        .
+      </p>
 
-      {/*
-    <div className="columns-2 sm:columns-3 gap-4 my-8">
+      {/*<div className="columns-2 sm:columns-3 gap-4 my-8">
         <div className="relative h-40 mb-4">
           <Image
             alt="Me speaking on stage at React Summit about the future of Next.js"
@@ -355,69 +306,39 @@ export default async function Page() {
             className="rounded-lg object-cover"
           />
         </div>
-            </div>
-  */}
+            </div> */}
       <div className="prose prose-neutral dark:prose-invert">
         <p>
-          I also travel. My favorites country where I climbed are Poland and Slovakia.
-          I like to photograph mountains and people. I put photoss from my expeditions on my blog - explorer.
+          I've also worked with or advised companies like Convex, Fauna,
+          Plasmic, and more about developer marketing, DevRel, and building
+          open-source communities.
         </p>
       </div>
+      <ul className="flex flex-col md:flex-row mt-8 space-x-0 md:space-x-4 space-y-2 md:space-y-0 font-sm text-neutral-600 dark:text-neutral-300">
+        <li>
+          <a
+            className="flex items-center hover:text-neutral-800 dark:hover:text-neutral-100 transition-all"
+            rel="noopener noreferrer"
+            target="_blank"
+            href="https://twitter.com/leeerob"
+          >
+            <ArrowIcon />
+            <p className="h-7 ml-2">follow me</p>
+          </a>
+        </li>
+        <li>
+          <a
+            className="flex items-center hover:text-neutral-800 dark:hover:text-neutral-100 transition-all"
+            rel="noopener noreferrer"
+            target="_blank"
+            href="https://leerob.substack.com"
+          >
+            <ArrowIcon />
+            <p className="h-7 ml-2">get email updates</p>
+          </a>
+        </li>
+      </ul>
 
-
-
-
-
-
-      <div className="py-6 mt-10 border-t">
-        <PaddingContainer>
-          <div>
-            <h2 className="text-2xl font-bold">{siteConfig.siteName}</h2>
-            <p className="max-w-md mt-2 text-neutral-700">{siteConfig.description}
-            </p>
-          </div>
-          <div className="flex flex-wrap justify-between mt-6 gap-4 mt-6">
-            <div>
-              <div className="font-medium">#explorertheworld</div>
-
-              <div className="flex items-center gap-3 mt-2 text-neutral-600">
-                <SocialLink
-                  platform="twitter"
-                  link={siteConfig.socialLinks.twitter}
-                />
-                <SocialLink
-                  platform="instagram"
-                  link={siteConfig.socialLinks.instagram}
-                />
-                <SocialLink
-                  platform="github"
-                  link={siteConfig.socialLinks.github}
-                />
-                <SocialLink
-                  platform="youtube"
-                  link={siteConfig.socialLinks.youtube}
-                />
-                <SocialLink
-                  platform="linkedin"
-                  link={siteConfig.socialLinks.linkedin}
-                />
-
-              </div>
-            </div>
-            <div>
-              <div className="text-sm text-neutral-400">Currently at
-              </div>
-              <div className="flex items-center gap-2 px-3 py-2 bg-white rounded-md shadow-md">
-                <div className="w-2 h-2 bg-emerald-400 rounded-full" />
-                {siteConfig.currentlyAt}
-              </div>
-            </div>
-          </div>
-
-
-
-        </PaddingContainer>
-      </div>
-    </section >
+    </section>
   );
 }

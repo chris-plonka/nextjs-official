@@ -1,27 +1,68 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { allBlogs } from 'contentlayer/generated';
-import ViewCounter from './view-counter';
-import { getViewsCount } from 'lib/metrics';
+import directus from "lib/directus";
+import { Post } from "types/collection";
+import PostCard from 'components/post/post-card';
+
+
 
 export const metadata: Metadata = {
   title: 'Blog',
   description: 'Read my thoughts on software development, design, and more.',
 };
 
+
+
+
+
+
 export default async function BlogPage() {
-  const allViews = await getViewsCount();
+
+
+
+  const getAllPosts = async () => {
+    try {
+      const posts = await directus.items("post").readByQuery({
+        fields: [
+          "*",
+          "author.id",
+          "author.first_name",
+          "author.last_name",
+          "category.id",
+          "category.title",
+        ],
+      });
+
+      return posts.data;
+
+    } catch (error) {
+      console.log(error);
+      throw new Error("Error fetching posts");
+    }
+  };
+
+
+
+
+
+  {/*
+  console.log(posts);
+
+  if (!posts) {
+    notFound();
+  }
+*/}
+
+  const posts = await getAllPosts();
+
 
   return (
     <section>
-      <h1 className="font-bold text-2xl mb-8 tracking-tighter">read my blog</h1>
-      {allBlogs
-        .sort((a, b) => {
-          if (new Date(a.publishedAt) > new Date(b.publishedAt)) {
-            return -1;
-          }
-          return 1;
-        })
+      {/*}   <PostCard post={posts[7]} /> */}
+
+      <h1 className="font-bold text-2xl mb-8 tracking-tighter">read my explorer blog</h1>
+
+      {posts
         .map((post) => (
           <Link
             key={post.slug}
@@ -29,17 +70,16 @@ export default async function BlogPage() {
             href={`/blog/${post.slug}`}
           >
             <div className="w-full flex flex-col">
+
               <p className="text-neutral-900 dark:text-neutral-100 tracking-tight">
                 {post.title}
               </p>
-              <ViewCounter
-                allViews={allViews}
-                slug={post.slug}
-                trackView={false}
-              />
+
             </div>
           </Link>
         ))}
+
     </section>
+
   );
 }
