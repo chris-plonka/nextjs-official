@@ -45,8 +45,7 @@ export default async function BlogPage() {
 
 
 
-    console.log(posts);
-
+  
     if (!posts) {
       notFound();
     }
