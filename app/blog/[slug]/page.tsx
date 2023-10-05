@@ -1,5 +1,4 @@
 import React from 'react';
-import CTACard from "components/elements/cta-card";
 import SocialLink from "components/elements/social-link";
 import { notFound } from "next/navigation";
 import PaddingContainer from "components/layout/padding-container";
@@ -104,7 +103,7 @@ const Page = async ({ params }: { params: { slug: string } }) => {
                 <PostBody body={post.body} />
 
 
-                   
+
             </div>
             {/*}            </PaddingContainer >  */}
         </section>
