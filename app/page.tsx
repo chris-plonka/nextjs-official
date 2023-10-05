@@ -50,7 +50,7 @@ function ArrowIcon() {
   );
 }
 
-
+{/*}
 function ChannelLink({ img, link, name, subscribers }) {
   return (
     <a
@@ -102,7 +102,7 @@ function ChannelLink({ img, link, name, subscribers }) {
     </a>
   );
 }
-
+*/}
 {/*}
 async function BlogLink({ slug, name }) {
   const allViews = await getViewsCount();
