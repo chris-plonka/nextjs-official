@@ -48,14 +48,7 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  twitter: {
-    title: '',
-    card: '',
-  },
-  verification: {
-    google: '',
-    yandex: '',
-  },
+
 };
 
 export default function RootLayout({
