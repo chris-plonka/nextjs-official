@@ -104,7 +104,7 @@ const Page = async ({ params }: { params: { slug: string } }) => {
                 <PostBody body={post.body} />
 
 
-                   */}
+                   
             </div>
             {/*}            </PaddingContainer >  */}
         </section>
