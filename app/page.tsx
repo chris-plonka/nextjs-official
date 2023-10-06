@@ -12,6 +12,7 @@ import directus from "lib/directus";
 import siteConfig from "config/site";
 import PaddingContainer from 'components/layout/padding-container'
 import SocialLink from "components/elements/social-link";
+import EmailLink from "components/elements/email-link";
 import { notFound } from "next/navigation";
 
 {/*}
@@ -400,8 +401,13 @@ export default async function Page() {
                   platform="linkedin"
                   link={siteConfig.socialLinks.linkedin}
                 />
+                <EmailLink
+                  platform="mail"
+                  link={siteConfig.emailLinks.mail}
+                />
 
               </div>
+
             </div>
             <div>
               <div className="text-sm text-neutral-400">Currently at

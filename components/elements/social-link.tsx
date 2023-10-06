@@ -6,6 +6,7 @@ import {
     Twitter,
     Youtube,
     Target,
+    Mail,
 } from "lucide-react";
 import Link from "next/link";
 
@@ -27,7 +28,6 @@ const SocialLink = ({ platform, link, isShareURL = false }: { platform: string; 
                 return <Github size="18" />;
             case "target":
                 return <Target size="18" />;
-
 
         }
     };

@@ -17,10 +17,13 @@ const siteConfig: SiteConfig = {
     currentlyAt: "Pisarzowice",
     socialLinks: {
         twitter: "",
-        instagram: "",
+        instagram: "https://www.instagram.com/chrisplonka76",
         github: "https://www.github.com/chris-plonka",
-        youtube: "",
+        youtube: "https://www.youtube.com/@chris-plonka",
         linkedin: "",
+    },
+    emailLinks: {
+        mail: "mailto:info@krzysztofplonka.pl",
     },
 };
 
