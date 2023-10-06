@@ -359,7 +359,7 @@ export default async function Page() {
       <div className="prose prose-neutral dark:prose-invert">
         <p>
           I also travel. My favorites country where I climbed are Poland and Slovakia.
-          I like to photograph mountains and people. I put photoss from my expeditions on my blog - explorer.
+          I like to photograph mountains and people. I put photos from my expeditions on my blog - explorer.
         </p>
       </div>
 
