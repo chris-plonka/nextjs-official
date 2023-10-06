@@ -9,6 +9,9 @@ export interface SiteConfig {
         linkedin: string;
         instagram: string;
     };
+    emailLinks: {
+        mail: string;
+    }
 }
 
 const siteConfig: SiteConfig = {
