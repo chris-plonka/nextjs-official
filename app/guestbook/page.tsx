@@ -21,7 +21,7 @@ const metadata = {
 
 
 export default function Page() {
-    const { data: session } = <SessionProvider> useSession() </SessionProvider>
+    const { session } = <SessionProvider> useSession() </SessionProvider>
     const [guestbookData, setGuestbookData] = React.useState(null)
     const [message, setmessage] = React.useState(null)
     const [emptyalert, setemptyalert] = React.useState(false)
