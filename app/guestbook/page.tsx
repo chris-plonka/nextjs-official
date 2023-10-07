@@ -1,8 +1,11 @@
 'use client'
-import { SessionProvider } from "next-auth/react";
 
 
 import React from 'react'
+import { SessionProvider } from "next-auth/react";
+
+
+
 import Link from 'next/link'
 import { BsGithub, BsGoogle } from 'react-icons/bs'
 import { supabase } from '../../lib/supabaseClient.js'
