@@ -1,15 +1,14 @@
 'use client'
 
-
 import React from 'react'
-import { SessionProvider } from "next-auth/react";
+
 
 
 
 import Link from 'next/link'
 import { BsGithub, BsGoogle } from 'react-icons/bs'
 import { supabase } from '../../lib/supabaseClient.js'
-import { useSession, signIn, signOut } from 'next-auth/react'
+import { useSession, signIn, signOut, SessionProvider } from 'next-auth/react'
 import Skeleton from 'react-loading-skeleton'
 import 'react-loading-skeleton/dist/skeleton.css'
 
@@ -20,8 +19,8 @@ const metadata = {
 }
 
 
-export default function Page() {
-    const { session } = <SessionProvider> useSession() </SessionProvider>
+const index = () => {
+    const { data: session } =<SessionProvider> useSession()  </SessionProvider>
     const [guestbookData, setGuestbookData] = React.useState(null)
     const [message, setmessage] = React.useState(null)
     const [emptyalert, setemptyalert] = React.useState(false)
@@ -156,3 +155,5 @@ export default function Page() {
         </main>
     )
 }
+
+export default index
