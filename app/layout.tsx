@@ -4,6 +4,7 @@ import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import Sidebar from './components/sidebar';
 import { Analytics } from '@vercel/analytics/react';
+import { SessionProvider } from 'next-auth/react'
 
 const graphik = localFont({
   src: [

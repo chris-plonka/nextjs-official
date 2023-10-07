@@ -14,9 +14,6 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "baseUrl": ".",
-    "paths": {
-      "contentlayer/generated": ["./.contentlayer/generated"]
-    },
     "incremental": true,
     "plugins": [
       {

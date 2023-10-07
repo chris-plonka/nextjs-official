@@ -8,7 +8,7 @@
     "setup": "node ./lib/setup.mjs"
   },
   "dependencies": {
-    "@planetscale/database": "^1.11.0",
+    "@supabase/supabase-js": "^2.4.1", 
     "@vercel/analytics": "^1.0.2",
     "@vercel/edge-config": "^0.2.1",
     "clsx": "^2.0.0",
@@ -24,6 +24,8 @@
     "next-contentlayer": "^0.3.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+	"react-icons": "^4.7.1",
+    "react-loading-skeleton": "^3.1.0",
     "react-tweet": "^3.1.1",
     "react-wrap-balancer": "^1.1.0",
     "rehype-autolink-headings": "^6.1.1",

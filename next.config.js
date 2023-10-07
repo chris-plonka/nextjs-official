@@ -25,7 +25,15 @@ const nextConfig = {
       serverActions: true,
     },
   */
+  
 
+  reactStrictMode: true,
+
+
+ 
+
+  
+  
   redirects() {
     try {
       return get('redirects');
