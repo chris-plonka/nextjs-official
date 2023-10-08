@@ -1,10 +1,6 @@
 'use client'
 
 import React from 'react'
-
-
-
-
 import Link from 'next/link'
 import { BsGithub, BsGoogle } from 'react-icons/bs'
 import { supabase } from '../../lib/supabaseClient.js'
@@ -20,7 +16,7 @@ const metadata = {
 
 
 const index = () => {
-    const { data: session } = <SessionProvider> useSession()  </SessionProvider>
+    const { session } = <SessionProvider> useSession()  </SessionProvider>
     const [guestbookData, setGuestbookData] = React.useState(null)
     const [message, setmessage] = React.useState(null)
     const [emptyalert, setemptyalert] = React.useState(false)
