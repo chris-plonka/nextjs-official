@@ -7,12 +7,12 @@ import filming from 'public/images/home/filming.jpg';
 import meetups from 'public/images/home/meetups.jpg';
 import vercel from 'public/images/home/vercel.jpg';
 import { Post } from "types/collection";
-import PostCard from 'components/post/post-card';
-import directus from "lib/directus";
-import siteConfig from "config/site";
+import PostCard from '../components/post/post-card';
+import directus from "../lib/directus";
+import siteConfig from "../config/site";
 import PaddingContainer from 'components/layout/padding-container'
-import SocialLink from "components/elements/social-link";
-import EmailLink from "components/elements/email-link";
+import SocialLink from "../components/elements/social-link";
+import EmailLink from "../components/elements/email-link";
 import { notFound } from "next/navigation";
 
 {/*}
