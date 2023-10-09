@@ -25,7 +25,7 @@ import {
 } from 'lib/metrics'; */}
 import { Suspense } from 'react';
 
-function Badge(props) {
+function Badge(props: any) {
   return (
     <a
       {...props}
