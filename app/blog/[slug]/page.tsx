@@ -1,7 +1,7 @@
 import React from 'react';
 import { notFound } from "next/navigation";
-import PostHero from "/components/post/post-hero";
-import PostBody from "/components/post/post-body";
+import PostHero from "../../../components/post/post-hero";
+import PostBody from "../../../components/post/post-body";
 import directus from "lib/directus";
 
 
