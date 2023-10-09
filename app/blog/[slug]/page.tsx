@@ -2,7 +2,7 @@ import React from 'react';
 import { notFound } from "next/navigation";
 import PostHero from "../../../components/post/post-hero";
 import PostBody from "../../../components/post/post-body";
-import directus from "lib/directus";
+import directus from "../../../lib/directus";
 
 
 export const generateStaticParams = async () => {
