@@ -1,5 +1,5 @@
 import React from 'react'
-import { Post } from "types/collection";
+import { Post } from "../../types/collection";
 import PostContent from "./post-content";
 import Image from "next/image";
 

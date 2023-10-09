@@ -1,5 +1,5 @@
 import { getReadingTime, getRelativeDate } from "lib/helpers";
-import { Post } from "types/collection";
+import { Post } from "../../types/collection";
 import { ArrowRight } from "lucide-react";
 
 interface PostContentProps {
