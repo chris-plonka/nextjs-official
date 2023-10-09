@@ -7,7 +7,7 @@ export const {
   CSRF_experimental,
 } = NextAuth({
   providers: [
-    GitHub({
+    Google({
       clientId: process.env.OAUTH_CLIENT_KEY as string,
       clientSecret: process.env.OAUTH_CLIENT_SECRET as string,
     }),

@@ -7,12 +7,11 @@ export const authOptions = {
         GoogleProvider({
             clientId: process.env.GOOGLE_ID,
             clientSecret: process.env.GOOGLE_SECRET,
+			allowDangerousEmailAccountLinking: true,
         }),
     ],
-	session: {
-  strategy: 'jwt',
- },
- //   secret: process.env.NEXTAUTH_SECRET,
+	
+   secret: process.env.NEXTAUTH_SECRET,
 };
 
 export default NextAuth(authOptions)
