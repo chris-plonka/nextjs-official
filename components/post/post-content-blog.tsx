@@ -7,7 +7,7 @@ interface PostContentProps {
     isPostPage?: boolean;
 }
 
-const PostContent: JSX.Element[] = async ({ post, isPostPage = false }: PostContentProps) => {
+const PostContent = async ({ post, isPostPage = false }: PostContentProps) => {
     return (
         <div className="space-y-2">
             {/* Tags */}
