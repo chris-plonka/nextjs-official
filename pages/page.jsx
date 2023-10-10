@@ -12,7 +12,7 @@ import 'react-loading-skeleton/dist/skeleton.css'
 
 
 const index = () => {
-  const { session } = <SessionProvider> useSession(); </SessionProvider>
+  const { data: session } = <SessionProvider> useSession(); </SessionProvider>
   const [guestbookData, setGuestbookData] = React.useState(null)
   const [message, setmessage] = React.useState(null)
   const [emptyalert, setemptyalert] = React.useState(false)
