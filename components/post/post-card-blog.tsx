@@ -1,6 +1,6 @@
 import { Post } from "../../types/collection";
 import Image from "next/image";
-import Link from "react-scroll";
+import Link from "next/link";
 import PostContent from "./post-content-blog";
 
 interface PostProps {
