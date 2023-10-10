@@ -9,7 +9,7 @@ interface PostProps {
     reverse?: boolean;
 }
 
-const PostCard: JSX.Element[] = ({
+const PostCard = ({
     post,
     layout = "horizontal",
     reverse = false,
