@@ -117,8 +117,7 @@ const index = () => {
                       {guestbookData.created_at.slice(11, 16)}
                     </p>
                     <div
-                      className={`hidden ${
-                       session && guestbookData.email === session.user.email
+                      className={`hidden ${session && guestbookData.email === session.user.email
                         ? '!flex'
                         : '!hidden'
                         }`}
