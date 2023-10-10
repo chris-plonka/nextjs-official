@@ -4,7 +4,7 @@ import { supabase } from '../../lib/supabaseClient.js'
 import { useSession, signIn, signOut, SessionProvider } from 'next-auth/react'
 import Skeleton from 'react-loading-skeleton'
 import 'react-loading-skeleton/dist/skeleton.css'
-import Index from "../../pages/page";
+import Index from "../../pages/page.jsx";
 
 
 
